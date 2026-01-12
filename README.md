@@ -1,4 +1,10 @@
-# 📋 API 명세
+# 📅 Schedule API Project
+
+Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
+
+---
+
+## 📋 API 명세
 
 ---
 
