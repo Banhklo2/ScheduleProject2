@@ -4,6 +4,75 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
 
 ---
 
+## 📦 프로젝트 구조
+
+```text
+com.example.scheduleproject2
+ ├─ ScheduleProject2Application
+
+ ├─ schedule
+ │   ├─ controller
+ │   │   └─ ScheduleController
+ │   ├─ dto
+ │   │   ├─ ScheduleCreateRequest
+ │   │   ├─ ScheduleCreateResponse
+ │   │   └─ ScheduleDeleteResponse
+ │   │   ├─ ScheduleGetResponse
+ │   │   ├─ ScheduleUpdateRequest
+ │   │   ├─ ScheduleUpdateResponse
+ │   ├─ entity
+ │   │   └─ BaseEntity
+ │   │   └─ Schedule
+ │   ├─ repository
+ │   │   └─ ScheduleRepository
+ │   └─ service
+ │       └─ ScheduleService
+ 
+ ├─ user
+ │   ├─ controller
+ │   │   └─ UserController
+ │   ├─ dto
+ │   │   ├─ SessionUser
+ │   │   ├─ SigninUserRequest
+ │   │   ├─ SigninUserResponse
+ │   │   ├─ SignupUserRequest
+ │   │   ├─ SignupUserResponse
+ │   │   ├─ UserCreateRequest
+ │   │   ├─ UserCreateResponse
+ │   │   ├─ UserDeleteResponse
+ │   │   ├─ UserGetResponse
+ │   │   ├─ UserUpdateRequest
+ │   │   └─ UserUpdateResponse
+ │   ├─ entity
+ │   │   └─ BaseEntity
+ │   │   └─ User
+ │   ├─ repository
+ │   │   └─ UserRepository
+ │   └─ service
+ │       └─ UserService
+ └─ ScheduleProject2Application
+```
+
+---
+
+## 🧩 구현 기능
+
+- ✅ 일정 생성 API  
+- ✅ 일정 전체/단건 조회 API  
+- ✅ 일정 수정 API  
+- ✅ 일정 삭제 API  
+
+- ✅ 유저 생성 API  
+- ✅ 유저 전체/단건 조회 API  
+- ✅ 유저 수정 API  
+- ✅ 유저 삭제 API  
+
+- ✅ 회원가입 API  
+- ✅ 로그인 API  
+- ✅ 로그아웃 API  
+
+---
+
 ## 📋 API 명세
 
 ---
@@ -27,7 +96,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
   "title": "첫 일정",
   "content": "포스트맨 테스트"
 }
-
 ```
 
 **Response Example**
@@ -41,7 +109,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "createdAt": "2026-01-12T10:20:41.6436389",
     "modifiedAt": "2026-01-12T10:20:41.6436389"
 }
-
 ```
 
 ### 2️⃣ 일정 전체 조회
@@ -66,7 +133,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
         "modifiedAt": "2026-01-12T10:20:41.643639"
     }
 ]
-
 ```
 
 ### 3️⃣ 일정 단건 조회
@@ -107,7 +173,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "title" : "첫 일정2",
     "content" : "포스트맨 수정"
 }
-
 ```
 
 **Response Example**
@@ -121,7 +186,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "createdAt": "2026-01-12T10:20:41.643639",
     "modifiedAt": "2026-01-12T10:20:41.643639"
 }
-
 ```
 
 ### 5️⃣ 일정 삭제
@@ -154,7 +218,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "email": "a@a.com",
     "password": "12345678"
 }
-
 ```
 
 **Response Example**
@@ -166,7 +229,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "createdAt": "2026-01-12T10:24:12.2462144",
     "modifiedAt": "2026-01-12T10:24:12.2462144"
 }
-
 ```
 
 ### 2️⃣ 유저 전체 조회
@@ -196,7 +258,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
         "modifiedAt": "2026-01-12T10:24:12.246214"
     }
 ]
-
 ```
 
 ### 3️⃣ 유저 단건 조회
@@ -217,7 +278,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "createdAt": "2026-01-12T10:24:12.246214",
     "modifiedAt": "2026-01-12T10:24:12.246214"
 }
-
 ```
 
 ### 4️⃣ 유저 수정
@@ -236,7 +296,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
   "name": "효경2",
   "email": "b@b.com"
 }
-
 ```
 
 **Response Example**
@@ -248,7 +307,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "createdAt": "2026-01-12T10:16:27.847928",
     "modifiedAt": "2026-01-12T10:16:27.847928"
 }
-
 ```
 
 ### 5️⃣ 유저 삭제  
@@ -280,7 +338,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
   "email": "a@a.com",
   "password": "12345678"
 }
-
 ```
 
 **Response Example**
@@ -292,7 +349,6 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
     "createdAt": "2026-01-12T10:16:27.8479279",
     "modifiedAt": "2026-01-12T10:16:27.8479279"
 }
-
 ```
 
 ### 2️⃣ 로그인
@@ -310,13 +366,11 @@ Spring Boot 기반 **일정 관리 앱 Develop** 프로젝트
   "email": "a@a.com",
   "password": "12345678"
 }
-
 ```
 
 **Response Example**
 ```json
 success
-
 ```
 
 ### 3️⃣ 로그아웃
