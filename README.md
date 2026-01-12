@@ -1,10 +1,4 @@
-# 📅 Schedule API Project
-
-Spring Boot 기반 **일정 관리 REST API** 프로젝트입니다.  
-
----
-
-## 📋 API 명세
+# 📋 API 명세
 
 ---
 
@@ -184,7 +178,7 @@ Spring Boot 기반 **일정 관리 REST API** 프로젝트입니다.
     {
         "id": 1,
         "name": "효경",
-        "email": a@a.com",
+        "email": "a@a.com",
         "createdAt": "2026-01-12T10:16:27.847928",
         "modifiedAt": "2026-01-12T10:16:27.847928"
     },
